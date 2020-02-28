@@ -1,0 +1,79 @@
+.container{
+    display: grid;
+    width: calc(100% - 50px);
+    height: calc(100% - 20px);
+    border-color: #3B5998;
+    border-style: groove;
+    padding: 20px;
+    grid-template-rows: repeat(6,[row] 1fr) ;
+    grid-template-columns: repeat(5,[col] 1fr);
+    grid-template-areas:    "b b b b l"
+                            "abil abil hpac hpac hpac"
+                            "abil abil tin skill skill"
+                            "sav sav sav skill skill"
+                            "weap weap weap skill skill"
+                            "weap weap weap skill skill"
+                        ;
+}
+
+.basic{
+    grid-area: b;
+    grid-template-rows: repeat(3,5%);
+    grid-template-columns: repeat(8, 12%);
+    margin: 10px;
+    padding: 10px;
+    grid-template-areas:    "c-char c-char c-char c-char play play play play"
+                            "class class class lvl race c-align deity ."
+                            "c-size age gender c-height c-weight eyes hair skin"
+                            ;
+}
+
+.character{ grid-area: c-char}
+.player{ grid-area: play}
+.class{ grid-area: class}
+.level{ grid-area: lvl}
+.race{ grid-area: race}
+.alignment{ grid-area: c-align}
+.deity{ grid-area: deity}
+.size{ grid-area: c-size}
+.age{ grid-area: age}
+.gender{ grid-area: gender}
+.height{ grid-area: c-height}
+.weight{ grid-area: c-weight}
+.eyes{ grid-area: eyes}
+.hair{ grid-area: hair}
+.skin{ grid-area: skin}
+
+.logo{ grid-area: l}
+.ability{ grid-area: abil}
+.hp-ac{ grid-area: hpac}
+.saving-throw{ grid-area: sav}
+.touch-initiative{ grid-area: tin}
+.skills{ grid-area: skill}
+.weapons{ grid-area: weap}
+
+.basic > div{
+    border-width: thin;
+    border-style: dot-dash;
+    border-color: #3B5998;
+    padding: 10px;
+    margin: 10px;
+}
+
+.logo > img{
+    max-height: 1fr;
+    max-width: 1fr;
+}
+
+.container > div{
+    border-style: solid;
+    border-color: #3B5998;
+    padding: 10px;
+    margin: 10px;
+}
+
+.text-area{
+    border: dot-dot-dash blue;
+    padding: 10px;
+    margin: 10px;
+}

@@ -1,0 +1,231 @@
+body{
+    background-color: saddlebrown;
+}
+
+/*
+    In the outer grid the template dimensions are measured in fractions of the screen.
+    In order to allow one of the template areas to have its own grid system
+    the rows and columns are labelled [row] and [col] which are specifically referenced
+    by the main grid areas.
+ */
+
+
+#outer-grid {
+    display: grid;
+    grid-template-rows: repeat(7, [row] 1fr);
+    grid-template-columns: repeat(5, [col] 1fr);
+    grid-gap: 8px;
+    /*grid-auto-flow: row dense;*/
+}
+
+/*
+    Here the <div> tags which are directly inherited from the outer-grid id are
+    given specific attributes
+ */
+
+#outer-grid > div {
+    /*background-color: orangered;*/
+    border: ridge sandybrown thin;
+    color: black;
+    font-size: 4vh;
+    padding: 8px;
+}
+
+#title{
+    font-style: normal;
+    font-size: 189px;
+    text-align: center;
+    grid-column: col 1 / span 5;
+    grid-row: row 1;
+}
+
+#basics{
+    display: grid;
+    grid-column: col 1 / span 4;
+    grid-row: row 2;
+    grid-template-columns: repeat(12, [b-col] 1fr);
+    grid-template-rows: repeat(3, [b-col] 1fr);
+}
+
+#logo{
+    grid-column: col 5;
+    grid-row: row 2;
+}
+
+#logo > img{
+    max-height: 189px;
+}
+
+#abilities{
+    display: grid;
+    grid-column: col 1 / span 2;
+    grid-row: row 3 / span 2;
+}
+
+#hitpoints{
+    display: grid;
+    grid-row: row 3;
+    grid-column: col 3 / span 3;
+}
+
+#skills{
+    grid-row: row 4 / span 4;
+    grid-column: col 4 / span 2;
+}
+
+#weapons{
+    grid-row: row 6 / span 2;
+    grid-column: col 1 / span 3;
+}
+
+#savingsthrows{
+    grid-row: row 5;
+    grid-column: col 1 / span 3;
+}
+
+#initiative{
+    grid-row: row 4;
+    grid-column: col 3;
+}
+
+#inner-grid {
+    display: grid;
+    grid-column: 1;
+    grid-row: 1;
+    grid-template-columns: repeat(8,1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-gap: 5px;
+}
+
+#inner-grid > div {
+    background: salmon;
+    padding: 8px;
+}
+
+#sg1 label
+{
+    float: right;
+}
+
+#sg1 input
+{
+    float: right;
+}
+
+/*
+    Here the <div> tags inherited from the #basics id are given their own set of
+    attributes which differ from the outer-grid ones
+ */
+
+#basics > div{
+    display: inline-block;
+    text-align: left;
+    border: sandybrown thin dotted;
+    margin: 10px;
+}
+
+#basics > div > input, select{
+    display: block;
+    background: none;
+    outline: 0;
+    border: 0;
+    width: auto;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 2px;
+    border-bottom: black solid 2px;
+    font-family: "Arial Rounded MT Bold";
+    font-size: 25px;
+}
+
+#basics > div > input, select{
+    width: calc(100% - 20px);
+}
+
+small{
+    margin-top: 2px;
+    margin-left: 10px;
+    display: block;
+    font-size: 2vh;
+}
+
+#logo > img{
+    max-width: 100%;
+    max-height: 100%;
+    display: block;
+}
+
+#character{
+    grid-column: b-col 1 / span 6;
+    grid-row: b-row 1;
+}
+
+#player{
+    grid-column: b-col 7 / span 6;
+    grid-row: b-row 1;
+}
+
+#class{
+    grid-column: b-col 1 / span 4;
+    grid-row: b-row 2;
+}
+
+#level{
+    grid-column: b-col 5 / span 2;
+    grid-row: b-row 2;
+}
+
+#race{
+    grid-column: b-col 7 / span 2;
+    grid-row: b-row 2;
+}
+
+#alignment{
+    grid-column: b-col 9 / span 2;
+    grid-row: b-row 2;
+}
+
+#deity{
+    grid-column: b-col 11 / span 2;
+    grid-row: b-row 2;
+}
+
+#size {
+    grid-column: b-col 1 / span 2;
+    grid-row: b-row 3;
+}
+
+#age {
+    grid-column: b-col 3;
+    grid-row: b-row 3;
+}
+
+#gender{
+    grid-column: b-col 4 / span 2;
+    grid-row: b-row 3;
+}
+
+#height{
+    grid-column: b-col 6 / span 2;
+    grid-row: b-row 3;
+}
+
+#weight{
+    grid-column: b-col 8 / span 2;
+    grid-row: b-row 3;
+}
+
+#eyes{
+    grid-column: b-col 10;
+    grid-row: b-row 3;
+}
+
+#hair{
+    grid-column: b-col 11;
+    grid-row: b-row 3;
+}
+
+#skin{
+    grid-column: b-col 12;
+    grid-row: b-row 3;
+}

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+
+<style type="text/css">
+    span{
+        display: inline-block;
+    }
+    span select input {
+        display: block;
+        position: relative;
+        top: -3em;
+
+    }
+    span input { text-align:center;}
+    span label {
+        display: block;
+        position: relative;
+        top:3em;
+        text-align: center;
+    }
+</style>
+
+<form action="" method="post">
+
+    <label for="time">Time settings</label>
+
+    <div class="description">
+        Description goes here
+    </div>
+
+    <span>
+        <label for="time">Hour</label>
+        <input type="text" id="time" name="time" maxlength="2" size="2">
+    </span>
+    <label>:</label>
+    <span>
+        <label for="time-minute">Minute</label>
+        <input type="text" id="time-minute" name="time-minute" maxlength="2" size="2">
+    </span>
+    <span>:</span>
+    <span>
+        <label for="time-seconds">Seconds</label>
+        <input type="text" id="time-seconds" name="time-seconds" maxlength="2" size="2">
+    </span>
+
+    <span>
+        <select id="time-ampm" name="time-ampm">
+            <option value="am">AM</option>
+            <option value="pm">PM</option>
+        </select>
+    </span>
+</form>
