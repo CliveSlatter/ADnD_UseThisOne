@@ -12,8 +12,12 @@ body{
 
 #outer-grid {
     display: grid;
+    max-width: 70%;
+    margin-left: 15%;
+    margin-right: 15%;
+    justify-self: center;
     grid-template-rows: repeat(7, [row] 1fr);
-    grid-template-columns: repeat(5, [col] 1fr);
+    grid-template-columns: repeat(8, [col] 1fr);
     grid-gap: 8px;
     /*grid-auto-flow: row dense;*/
 }
@@ -27,28 +31,28 @@ body{
     /*background-color: orangered;*/
     border: ridge sandybrown thin;
     color: black;
-    font-size: 4vh;
+    /*font-size: 4vh;*/
     padding: 8px;
 }
 
-#title{
+#outer-grid > #title{
     font-style: normal;
-    font-size: 189px;
+    font-size: 8vh;
     text-align: center;
-    grid-column: col 1 / span 5;
+    grid-column: col 1 / span 8;
     grid-row: row 1;
 }
 
 #basics{
     display: grid;
-    grid-column: col 1 / span 4;
+    grid-column: col 1 / span 6;
     grid-row: row 2;
     grid-template-columns: repeat(12, [b-col] 1fr);
     grid-template-rows: repeat(3, [b-col] 1fr);
 }
 
 #logo{
-    grid-column: col 5;
+    grid-column: col 7  / span 2;
     grid-row: row 2;
 }
 
@@ -65,27 +69,29 @@ body{
 #hitpoints{
     display: grid;
     grid-row: row 3;
-    grid-column: col 3 / span 3;
+    grid-column: col 3 / span 6;
+    grid-template-rows: repeat(2,1fr);
+    grid-template-columns: repeat(20,1fr);
 }
 
 #skills{
     grid-row: row 4 / span 4;
-    grid-column: col 4 / span 2;
+    grid-column: col 5 / span 4;
 }
 
 #weapons{
     grid-row: row 6 / span 2;
-    grid-column: col 1 / span 3;
+    grid-column: col 1 / span 4;
 }
 
 #savingsthrows{
     grid-row: row 5;
-    grid-column: col 1 / span 3;
+    grid-column: col 1 / span 4;
 }
 
 #initiative{
     grid-row: row 4;
-    grid-column: col 3;
+    grid-column: col 3 / span 2;
 }
 
 #inner-grid {
@@ -120,7 +126,7 @@ body{
 #basics > div{
     display: inline-block;
     text-align: left;
-    border: sandybrown thin dotted;
+    /*border: sandybrown thin dotted;*/
     margin: 10px;
 }
 
@@ -130,12 +136,57 @@ body{
     outline: 0;
     border: 0;
     width: auto;
+    height: 4vh;
     margin-left: 10px;
     margin-right: 10px;
     margin-bottom: 2px;
     border-bottom: black solid 2px;
-    font-family: "Arial Rounded MT Bold";
-    font-size: 25px;
+    font-family: "Arial Rounded MT Bold", serif;
+    font-size: 2vh;
+    text-transform: uppercase;
+}
+
+#abilities{
+    font-family: Arial;
+}
+
+#abilities > table{
+    width: auto;
+}
+
+#abilities th{
+    font-size: 2vh;
+    border: black double;
+    width: auto;
+}
+
+#abilities td{
+    font-size: 3vh;
+    width: auto;
+}
+
+#abilities input, label{
+    align-self: center;
+    width: 1fr;
+    height: 80%;
+}
+
+#abilities .col-dark{
+    border: thin black solid;
+    background-color: black;
+    color: white;
+}
+
+#abilities .col-light{
+    text-align: center;
+    border: black thin solid;
+    color: black;
+}
+
+#abilities .col-grey-border{
+    text-align: center;
+    border: solid grey 10px;
+    padding: 10px;
 }
 
 #basics > div > input, select{
